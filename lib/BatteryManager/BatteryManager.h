@@ -2,7 +2,8 @@
 #define BATTERYMANAGER_H
 
 #define SAMPLE_COUNT 10 
-#define ADC_PIN 34
+#define ADC_PIN 34 
+
 
 #include <Arduino.h>
 #include "esp_adc_cal.h"

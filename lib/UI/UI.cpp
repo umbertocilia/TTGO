@@ -167,3 +167,13 @@ UI::calculateBatteryColor(int level)
   return tft.color565(red, green, blue);
 }
 
+void
+UI::TurnOffScreen() {
+    // Spegni il display
+    this->tft.writecommand(TFT_DISPOFF);   // Comando per spegnere il display
+    this->tft.writecommand(TFT_SLPIN);     // Comando per entrare in modalità sleep
+
+    // Spegni la retroilluminazione (controlla che il pin TFT_BL sia configurato correttamente)
+    digitalWrite(TFT_BL, LOW);
+}
+
